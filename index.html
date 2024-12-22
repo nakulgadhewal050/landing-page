@@ -13,10 +13,13 @@
       rel="stylesheet">
 
    <style>
+
       * {
-         margin: 0;
-         padding: 0;
-      }
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
       body {
          background-color: rgb(0, 0, 33);
@@ -75,8 +78,7 @@
 
       .leftSection {
          font-size: 2.5rem;
-
-
+        
       }
 
       .rightSection img {
@@ -93,22 +95,27 @@
          color: rgb(120, 60, 176);
       }
 
-      .secondSection {
+       /* --------------------------------------Projects--------------------------------- */
+
+
+      #secondSection {
          max-width: 80vw;
          margin: auto;
          height: 80vh;
+         
       }
 
 
       main hr {
          border: 0;
          background-color: #9c97f1;
-         height: 1.2px;
+         height: 1.9px;
          margin: 40px 84px
       }
 
-      .secondSection h1 {
+      #secondSection h1 {
          font-size: 1.9rem;
+
       }
 
       .text-gray {
@@ -116,16 +123,16 @@
 
       }
 
-      .secondSection .box {
+      #secondSection .box {
          background-color: white;
          width: 77vw;
          height: 2px;
-         margin: 56px 0;
+         margin: 90px 0;
          display: flex;
 
       }
 
-      .secondSection .vertical {
+      #secondSection .vertical {
          height: 93px;
          width: 1px;
          background-color: white;
@@ -157,25 +164,363 @@
          font-size: 15px;
       }
 
-      footer {
-         background-color: #060636;
-         height: 233px;
+
+      @media (min-width: 1400px) {
+
+         .container,
+         .container-lg,
+         .container-md,
+         .container-sm,
+         .container-xl,
+         .container-xxl {
+            max-width: 1320px;
+         }
+      }
+
+
+       /* -------------------------------------Footer------------------------------------- */
+
+
+
+      #footer {
+         background: rgb(0, 0, 33);
+         color: #f7f8f9;
+         font-size: 14px;
+         text-align: center;
+         padding: 30px 35px;
+      }
+
+
+      #footer .copyright {
+         margin: 0 0 5px 0;
+      }
+
+      #footer .credits {
+         font-size: 13px;
+      }
+
+      .aos-animate {
+         opacity: 0;
+         
+         transition: opacity 0.5s ease;
          
       }
 
-      .footer{
+      .aos-animate-scroll-down {
+         opacity: 1;
+         
+      }
+
+      .aos-animate-scroll-up {
+         opacity: 1;
+         
+      }
+
+
+      #footer .social-icon {
+         display: inline-block;
+         width: 40px;
+         height: 40px;
+         text-align: center;
+         background-color: white;
+         border-radius: 50%;
+         overflow: hidden;
+      }
+
+      #footer .social-icon img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      #footer .social-media {
          display: flex;
-         padding: 23px 122px;
-         justify-content: space-evenly;
-
-      }
-      .footer ul{
-         list-style: none;
+         text-align: center;
+         justify-content: center;
+         gap: 20px;
+         margin-bottom: 30px;
       }
 
-      .footer > div{
-         width: 223px;
+
+
+      #footer .social-icon.linkedin:hover {
+         background-color: #0077b5;
       }
+
+      #footer .social-icon.github:hover {
+         background-color: #333;
+         
+      }
+
+      #footer .social-icon.twitter:hover {
+         background-color: #1da1f2;
+         
+      }
+
+      #footer .social-icon.instagram:hover {
+         background-color: #eb637c;
+      
+      }
+
+
+      /*---------------------------- About section----------------------------------- */
+
+      #about h2 {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-size: 30px;
+      }
+
+
+
+      .about-section p {
+         font-size: 1rem;
+         line-height: 1.6;
+         color: #ffff;
+         margin-bottom: 20px;
+         margin: 50px;
+      }
+
+      .about-section .highlight {
+         color: #6a0dad;
+         font-weight: bold;
+      }
+
+      .info-grid {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 20px;
+         margin-left: 390px;
+      }
+
+      .info-item {
+         display: flex;
+         align-items: center;
+         font-size: 14px;
+         color: white;
+      }
+
+      .info-item .arrow-icon {
+         display: inline-block;
+         width: 12px;
+         height: 12px;
+         transform: rotate(45deg);
+         border-right: 3px solid purple;
+         border-top: 3px solid purple;
+         margin-right: 10px;
+      }
+
+      .info-item span {
+         font-weight: bold;
+         margin-right: 10px;
+         color: white;
+      }
+
+      .info-item a {
+         text-decoration: none;
+         color: #0056b3;
+      }
+
+      .info-item a:hover {
+         text-decoration: underline;
+      }
+
+      /* ---------------------------------------------skills ---------------------------------------*/
+
+      .skills {
+         
+    font-family: sans-serif;
+    
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background-color: rgb(0, 0, 33);
+    
+}
+      
+        .skills-section {
+         text-align: center;
+         }
+
+      .skills-title {
+         
+         margin-top: -200px;
+         font-size: 30px;
+      }
+
+      .skills-container {
+         display: flex;
+         justify-content: space-between;
+         flex-wrap: wrap;
+         row-gap: 20px;
+      }
+
+      .skill-item {
+         width: calc(50% - 20px);
+         margin-bottom: 20px;
+      }
+
+      .skill-name {
+         font-size: 18px;
+         margin-bottom: 10px;
+      }
+
+      .skill-bar {
+         height: 10px;
+         background-color: #eee;
+         border-radius: 5px;
+         margin-bottom: 10px;
+         overflow: hidden;
+         position: relative;
+      }
+
+      .skill-progress {
+         height: 100%;
+         background-color: #4CAF50;
+         border-radius: 5px;
+      }
+
+      .skill-percentage {
+         position: absolute;
+         top: 50%;
+      
+         left: 50%;
+         
+         transform: translate(-50%, -50%);
+         
+         font-size: 12px;
+         color: gainsboro;
+   
+         font-weight: bold;
+      }
+
+    /* ----------------------back to top---------------------- */
+
+    #goToTopBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 99; 
+    color: white; 
+    border: none; 
+    outline: none; 
+    padding: 15px; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    font-size: 18px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#goToTopBtn:hover {
+    background-color: black; 
+}
+
+/* ---------------------------contact--------------------------- */
+
+#contact {
+    padding: 50px;
+    background-color: rgb(0, 0, 33);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    color: white;
+    font-size: 30px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 40%;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+.info-item .icon {
+    font-size: 2rem;
+    margin-right: 10px;
+    
+   
+   
+}
+.info-item .icon  :hover{
+   background-color: #fff;
+}
+
+
+.contact-form {
+    flex: 1;
+    max-width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px;
+    right: auto;
+    position: absolute;
+    margin-top: 260px;
+    left: 61%;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
    </style>
 </head>
 
@@ -185,10 +530,10 @@
          <div class="left"> Nakul's Portfolio</div>
          <div class="right">
             <ul>
-               <li><a href="/">Home</a></li>
-               <li><a href="/">About</a></li>
-               <li><a href="/">Projects</a></li>
-               <li><a href="/">Contect Me</a></li>
+               <li><a href="#">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#secondSection">Projects</a></li>
+               <li><a href="#contact">Contect Me</a></li>
             </ul>
          </div>
       </nav>
@@ -204,91 +549,347 @@
          </div>
          <div class="rightSection">
             <img
-               src="https://camo.githubusercontent.com/19db51af5f90f1b152bc0b9078f5fe97053955be5074f03f17019c70345bdcdb/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313336302f302a37513379765349765f7430696f4a2d5a2e676966"
-               alt="">
+               src="https://camo.githubusercontent.com/4d9f5ecceb711eec6e2018f38a5677dc657c9738d4a65ba3b928c41c0a45b439/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f313336302f302a37513379765349765f7430696f4a2d5a2e676966"
+               
          </div>
       </section>
       <hr>
-      <section class="secondSection">
-         <span class="text-gray">what I have done so far</span>
 
-         <h1>Work Experience</h1>
 
-         <div class="box">
-            <div class="vertical">
-               <img class="image-top" src="pngwing.com.png" alt="">
-               <div class="vertical-tital">
-                  HTML Developer
+      <!------------------------------------------ About section --------------------------------------->
+
+      <section id="about">
+         <h2>About me</h2>
+         <div class="about-section">
+
+            <p>Hello! I'm a passionate <span class="highlight">Web Developer</span> and <span class="highlight">Software
+                  Developer</span> with a knack for crafting clean and efficient code. I specialize in building
+               user-friendly websites, creating scalable software solutions, and solving complex problems through
+               innovative technology.</p>
+            <div class="info-grid">
+               <div class="info-item">
+                  <div class="arrow-icon"></div>
+                  <span>Birthday:</span> 13 november 2004
                </div>
-               <div class="vertical-desc">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, maxime!
+               <div class="info-item">
+                  <div class="arrow-icon"></div>
+                  <span>Age:</span> 20
+               </div>
+               <div class="info-item">
+                  <div class="arrow-icon"></div>
+                  <span>Website:</span> <a href="https://www.example.com" target="_blank">www.example.com</a>
+               </div>
+               <div class="info-item">
+                  <div class="arrow-icon"></div>
+                  <span>Degree:</span> Bachelor
+               </div>
+               <div class="info-item">
+                  <div class="arrow-icon"></div>
+                  <span>Phone:</span> +91 9111525695
+               </div>
+               <div class="info-item">
+                  <div class="arrow-icon"></div>
+                  <span>Email:</span> <a href="mailto:sayancodder731@gmail.com">nakulgadhewal050@gmail.com</a>
+               </div>
+               <div class="info-item">
+                  <div class="arrow-icon"></div>
+                  <span>City:</span> Bhilai, India
+               </div>
+               <div class="info-item">
+                  <div class="arrow-icon"></div>
+                  <span>Intern:</span> Available
                </div>
             </div>
 
-            <div class="vertical">
-               <img class="image-top" src="https://cdn-icons-png.flaticon.com/512/5072/5072860.png" alt="">
-               <div class="vertical-tital">
-                  HTML Developer
-               </div>
-               <div class="vertical-desc">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, maxime!
-               </div>
-            </div>
-           
-            <div class="vertical">
-               <img class="image-top" src="https://cdn-icons-png.flaticon.com/512/5072/5072860.png" alt="">
-               <div class="vertical-tital">
-                  HTML Developer
-               </div>
-               <div class="vertical-desc">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, maxime!
-               </div>
-            </div>
-            
-            <div class="vertical">
-               <img class="image-top" src="https://cdn-icons-png.flaticon.com/512/5072/5072860.png" alt="">
-               <div class="vertical-tital">
-                  HTML Developer
-               </div>
-               <div class="vertical-desc">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, maxime!
-               </div>
-               
-            </div>
-           
-           
-            <div class="vertical"></div>
-            <div class="vertical"></div>
+            <p>With expertise in modern web technologies, frameworks, and programming languages, I thrive on delivering
+               high-quality projects that exceed client expectations.</p>
          </div>
       </section>
-   </main>
 
-   <footer>
-      <dive class="footer">
+      
 
-         <div class="footer-first">
-            <h3>Nakul's Developer Portfolio</h3>
+  
+  
+
+   <!--------------------------------------------- skills ----------------------->
+
+   <hr>
+
+   <div class="skills">
+      <section class="skills-section">
+         <h2 class="skills-title">Skills</h2>
+         <p style="margin: 40px; font-weight: bold;">Some of the significant aptitudes which will assist me with achieving your objectives.</p>
+
+         <div class="skills-container">
+            <div class="skill-item">
+               <span class="skill-name">HTML & CSS</span>
+               <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%;"></div>
+                  <span class="skill-percentage">80%</span>
+               </div>
+            </div>
+
+            <div class="skill-item">
+               <span class="skill-name">JavaScript</span>
+               <div class="skill-bar">
+                  <div class="skill-progress" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                     aria-valuemax="100" style="width: 70%;"></div>
+                  <span class="skill-percentage">70%</span>
+               </div>
+            </div>
+
+            <div class="skill-item">
+               <span class="skill-name">Java</span>
+               <div class="skill-bar">
+                  <div class="skill-progress" style="width: 20%;"></div>
+                  <span class="skill-percentage">20%</span>
+               </div>
+            </div>
+
+            <div class="skill-item">
+               <span class="skill-name">Python/Django/Flask</span>
+               <div class="skill-bar">
+                  <div class="skill-progress" style="width: 40%;"></div>
+                  <span class="skill-percentage">40%</span>
+               </div>
+            </div>
+
+            <div class="skill-item">
+               <span class="skill-name">React.js</span>
+               <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%;"></div>
+                  <span class="skill-percentage">90%</span>
+               </div>
+            </div>
+
+            <div class="skill-item">
+               <span class="skill-name">AWS/Kubernetes/Docker</span>
+               <div class="skill-bar">
+                  <div class="skill-progress" style="width: 70%;"></div>
+                  <span class="skill-percentage">70%</span>
+               </div>
+            </div>
+
+            <div class="skill-item">
+               <span class="skill-name">Node.js</span>
+               <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%;"></div>
+                  <span class="skill-percentage">95%</span>
+               </div>
+            </div>
+
+            <div class="skill-item">
+               <span class="skill-name">MySQL/MongoDB</span>
+               <div class="skill-bar">
+                  <div class="skill-progress" style="width: 70%;"></div>
+                  <span class="skill-percentage">70%</span>
+               </div>
+            </div>
+
+            <div class="skill-item">
+               <span class="skill-name">Express.js</span>
+               <div class="skill-bar">
+                  <div class="skill-progress" style="width: 60%;"></div>
+                  <span class="skill-percentage">60%</span>
+               </div>
+            </div>
+
+            <div class="skill-item">
+               <span class="skill-name">Next.Js</span>
+               <div class="skill-bar">
+                  <div class="skill-progress" style="width: 40%;"></div>
+                  <span class="skill-percentage">40%</span>
+               </div>
+            </div>
          </div>
-         <div class="footer-second">
-            <ul>
-               <li>Home</li>
-               <li>about</li>
-               <li>Contact</li>
-               <li>Home</li>
-            </ul>
+      </section>
+   </div>
+
+   <hr style="margin-top: -150px;">
+
+
+ <!----------------------------- projects ------------------------------>
+
+ <section id="secondSection">
+         
+
+   <h1 style="display: flex; align-items: center; justify-content:  center;" >Projects</h1>
+
+   <div class="box">
+      <div class="vertical">
+         <img class="image-top" src="https://img.icons8.com/?size=100&id=20909&format=png&color=000000" alt="">
+         <div class="vertical-tital">
+           <a href="https://github.com/nakulgadhewal050" style="text-decoration: none;">Travel Planner</a> 
          </div>
-         <div class="footer-third"></div>
-         <div class="footer-forth"></div>
-      </dive>
+         <div class="vertical-desc">
+            Created dynamic, interactive web components and optimized websites for performance and cross-browser compatibility.
+         </div>
+      </div>
+
+      <div class="vertical">
+         <img class="image-top" src="https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000" alt="">
+         <div class="vertical-tital">
+            <a href="https://github.com/nakulgadhewal050" style="text-decoration: none;">Bloging Application</a>
+         </div>
+         <div class="vertical-desc">
+            Worked with frameworks like Bootstrap and Tailwind CSS to design modern, scalable UI/UX.
+         </div>
+      </div>
+     
+      <div class="vertical">
+         <img class="image-top" src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="">
+         <div class="vertical-tital">
+            <a href="https://github.com/nakulgadhewal050" style="text-decoration: none;">ToDo Application</a>
+         </div>
+         <div class="vertical-desc">
+            Delivered end-to-end web applications by combining front-end and back-end expertise
+         </div>
+      </div>
+      
+      <div class="vertical">
+         <img class="image-top" src="https://cdn.iconscout.com/icon/free/png-512/free-nodejs-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-226034.png?f=webp&w=256" alt="">
+         <div class="vertical-tital">
+           <a href="https://github.com/nakulgadhewal050" style="text-decoration: none;"> Netflix Clone</a>
+         </div>
+         <div class="vertical-desc">
+            Built and maintained server-side applications using Node.js and Express.js.
+            Designed RESTful APIs for seamless communication between front-end and back-end systems.
+         </div>
+         
+      </div>
+     
+     
+      <div class="vertical"></div>
+      <div class="vertical"></div>
+   </div>
+</section>
+
+<hr>
+
+<!----------------- contact ------------------------>
+
+<section id="contact">
+   <div class="container">
+       <h2>Contact</h2>
+       <div class="contact-container">
+           <div class="contact-info">
+               <div class="info-item">
+                   <span class="icon"><img src="https://cdn-icons-png.flaticon.com/128/14025/14025691.png " style=" width: 40px; border-radius: 8px; cursor: pointer;"></span>
+                   <div>
+                       <strong>Location:</strong>
+                       <p>Saeket Nagar, Bhilai, Chattisgarh, India - 490024</p>
+                   </div>
+               </div>
+               <div class="info-item">
+                   <span class="icon"><img src="https://cdn-icons-png.flaticon.com/128/9068/9068642.png" style="width: 40px; border-radius: 8px; cursor: pointer;"></span>
+                   <div>
+                       <strong>Email:</strong>
+                       <p>nakulgadhewal050@gmail.com</p>
+                   </div>
+               </div>
+               <div class="info-item">
+                   <span class="icon"><img src="https://cdn-icons-png.flaticon.com/128/724/724664.png " style="width: 40px; border-radius: 8px; cursor: pointer;"> </span>
+                   <div>
+                       <strong>Call:</strong>
+                       <p>+91 9111525695</p>
+                   </div>
+               </div>
+           </div>
+           <form class="contact-form" id="contactForm">
+               <div class="form-group" style="border-radius: 10px;">
+                   <input type="text" name="name" placeholder="Your Name" required>
+                   <input type="email" name="email" placeholder="Your Email" required>
+               </div>
+               <input type="text" name="subject" placeholder="Subject" required>
+               <textarea name="message" rows="5" placeholder="Message" required></textarea>
+               <div class="captcha-container">
+                  
+               </div>
+               <button type="submit" class="submit-btn">Send Message</button>
+           </form>
+       </div>
+   </div>
+</section>
+
+<hr>
+
+
+
+</main>
+
+
+<!-- //back to top -->
+
+<button id="goToTopBtn"><img src="https://img.icons8.com/?size=100&id=jqrJJZEWcErP&format=png&color=000000" style="height: 25px;"></button>
+
+
+
+   <footer id="footer">
+      <div class="container">
+
+
+         <div class="social-media">
+            <a href="https://linkedin.com/in/nakulgadhewal050" target="_blank" class="social-icon linkedin">
+               <img src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/nakulgadhewal050" target="_blank" class="social-icon github">
+               <img src="https://img.icons8.com/?size=100&id=LoL4bFzqmAa0&format=png&color=000000" alt="GitHub">
+            </a>
+            <a href="https://twitter.com/yourusername" target="_blank" class="social-icon twitter">
+               <img src="https://img.icons8.com/?size=100&id=119014&format=png&color=000000" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/yourusername/" target="_blank" class="social-icon instagram">
+               <img src="https://img.icons8.com/?size=100&id=119026&format=png&color=000000" alt="Instagram">
+            </a>
+         </div>
+         <div class="copyright">
+            <h1 style="font-size: 15px;"> © Copyright <strong><span>Nakul_Dev</span></strong>. All Rights Reserved</h1>
+         </div>
+         <div class="credits">
+            <h1 style="font-size: 15px; "> Designed by <a style="text-decoration: none;" href="https://github.com/nakulgadhewal050">Nakul</a></h1>
+         </div>
+      </div>
    </footer>
+
 
    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
    <!-- Setup and start animation! -->
    <script>
       var typed = new Typed('#element', {
-         strings: ['SoftWare Engineer', 'Web Developer', 'UI and  UX Developer', 'Fronted Developer'],
+         strings: ['SoftWare Engineer', 'Web Developer', 'Fronted Developer', 'Backend Developer'],
          typeSpeed: 50,
       });
+
+
+      // Get the button element
+const goToTopBtn = document.getElementById("goToTopBtn");
+
+// Show the button when scrolled down 100px from the top
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        goToTopBtn.style.display = "block";
+    } else {
+        goToTopBtn.style.display = "none";
+    }
+};
+
+// Scroll to the top when the button is clicked
+goToTopBtn.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+
+// contact
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Message sent successfully!");
+});
+
+
    </script>
 
 
